@@ -1,0 +1,29 @@
+[33mcommit 8ab4f20902a0f4b3aa7ce2973d02df26c15ef599[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: farhad <farhadfarahani@outlook.com>
+Date:   Sun May 21 00:09:50 2023 +0330
+
+    use crispy forms
+
+[33mcommit aca06021e19ede661b42d020d0b94ebcfc559d68[m
+Author: farhad <farhadfarahani@outlook.com>
+Date:   Sat May 20 22:34:26 2023 +0330
+
+    create login and signup page
+
+[33mcommit 04ccc0d9c1995de25f2ccec17d0a961310b190e9[m
+Author: farhad <farhadfarahani@outlook.com>
+Date:   Sat May 20 22:21:36 2023 +0330
+
+    create app pages
+
+[33mcommit ec888f8d375c566246aa619f4efe7b4a894ed4d8[m
+Author: farhad <farhadfarahani@outlook.com>
+Date:   Sat May 20 22:00:52 2023 +0330
+
+    create app account and superuser
+
+[33mcommit 658df79545873898e9c51732585d9603324037c6[m
+Author: farhad <farhadfarahani@outlook.com>
+Date:   Sat May 20 21:27:40 2023 +0330
+
+    initial commit
