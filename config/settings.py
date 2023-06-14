@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     'accounts',
     'pages',
+    'doctors',
 ]
 
 SITE_ID = 1
