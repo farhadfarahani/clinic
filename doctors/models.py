@@ -14,7 +14,7 @@ class Doctor(models.Model):
     phone_number = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.lastname
+        return self.lastname, self.firstname
 
     def get_absolute_url(self):
         return reverse('doctor_detail', args=[self.pk])
