@@ -1,9 +1,10 @@
 {% extends '_base.html' %}
 
+{% block page_title %}لیست پزشکان{% endblock %}
+
 {% block content %}
-    <body>
     <div class="container mt-4">
-        <div class="row flex-row-reverse justify-content-md-center">
+        <div class="row flex-row-reverse">
             {% for doctor in doctors %}
                 <div class="card m-2" style="max-width: 45%">
                     <div class="row g-0 h-100" dir="rtl">
@@ -15,7 +16,7 @@
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="card-body">
                                     <a href="{{ doctor.get_absolute_url }}"><h3 class="card-title">
-                                        <strong>{{ doctor.firstname }} {{ doctor.lastname }}</strong></h3></a>
+                                        <strong>{{ doctor.name }}</strong></h3></a>
                                     <p class="card-text pt-3">{{ doctor.expertise }}</p>
                                     <p class="text-muted">{{ doctor.visiting_days }}</p>
                                 </div>

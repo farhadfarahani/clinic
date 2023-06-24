@@ -11,13 +11,16 @@
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block styles %}
+
+    {% endblock %}
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-info" dir="rtl">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="static/icons/doctor.png" alt="" height="30"
+            <img src="{% static 'icons/doctor.png' %}" alt="" height="30"
                  class="d-inline-block align-text-top">
         </a>
         <a class="navbar-brand mx-3" href="#">دکتر کلینیک</a>
@@ -28,12 +31,12 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="{% url 'doctor_list' %}">خانه</a>
-                <a class="nav-link" href="{% url 'doctor_list' %}">اضافه کردن کتاب</a>
             </div>
         </div>
         <div class="mx-2 text-white">
             {% if user.is_authenticated %}
-             خوش آمدی {{ user.username }} | <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">خروج</a>
+                خوش آمدی {{ user.username }} |
+                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">خروج</a>
             {% else %}
                 <a href="{% url 'account_login' %}">ورود</a> | <a href="{% url 'account_signup' %}"> ثبت نام </a>
             {% endif %}
