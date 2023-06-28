@@ -1,6 +1,8 @@
 {% extends '_base.html' %}
+{% load crispy_forms_filters %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% load comment_tags %}
 
 {% block content %}
     <div class="container mt-5" dir="rtl">
@@ -28,11 +30,11 @@
                 <div class="d-flex justify-content-center">
                     <div class="card shadow my-3 p-5 w-sm-75 w-100">
                         <h2 class="mb-5">نظرات:</h2>
-                        <h3 class="review__title">{{ doctor.comments.count }}
+                        <h3 class="review__title">{{ doctor.comments.all|only_active_comments|length }}
                             نظر برای {{ doctor.name }}</h3>
                         <div class="border-bottom mb-3">
                             <ul class="review__list">
-                                {% for comment in doctor.comments.all %}
+                                {% for comment in doctor.comments.all|only_active_comments %}
                                     <li class="review__item">
                                         <div class="review__container">
                                             <div class="review__text">
@@ -46,7 +48,7 @@
                                                         <div class="doctor-rating">
                                                             <div class="m-0 star-rating star-five">
                                                                                 <span>Rated <strong
-                                                                                        class="rating">{{ doctor.stars }}</strong> out of 5</span>
+                                                                                        class="rating">{{ comment.stars }}</strong> out of 5</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -59,18 +61,6 @@
                                     </li>
                                 {% endfor %}
                             </ul>
-                        </div>
-                        <div>
-                            <div class="review__meta" dir="ltr">
-                                <span class="review__published-date">{{ comment.datetime_created }}</span>
-                                <span class="review__dash">-</span>
-                                <strong class="review__author px-4">{{ comment.author.username }}</strong>
-                            </div>
-                            <div class="doctor-rating">
-                                <div class="m-0 star-rating star-five">
-                                    <span>Rated <strong class="rating">{{ doctor.stars }}</strong> out of 5</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,6 +76,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="doctor-rating d-flex mb--20">
+        <div class="star-rating star-three">
+            <span>Rated <strong class="rating">{{ comment.stars }}</strong> out of 5</span>
         </div>
     </div>
 {% endblock %}
