@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
 
 
 class Doctor(models.Model):
@@ -27,16 +28,16 @@ class ActiveCommentsManager(models.Manager):
 
 class Comment(models.Model):
     DOCTOR_STARS = [
-        ('1', 'Very Bad'),
-        ('2', 'Bad'),
-        ('3', 'Normal'),
-        ('4', 'Good'),
-        ('5', 'Perfect'),
+        ('1', _('Very Bad')),
+        ('2', _('Bad')),
+        ('3', _('Normal')),
+        ('4', _('Good')),
+        ('5', _('Perfect')),
     ]
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='comments',)
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments', verbose_name='Comment author')
-    body = models.TextField(verbose_name='Comment text')
-    stars = models.CharField(max_length=10, choices=DOCTOR_STARS, verbose_name='What is your score?')
+    body = models.TextField(verbose_name=_('Write your comment text'))
+    stars = models.CharField(max_length=10, choices=DOCTOR_STARS, verbose_name=_('Your score with this Doctor'))
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)

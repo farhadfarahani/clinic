@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:41+0330\n"
+"POT-Creation-Date: 2023-06-28 22:22+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\templates\doctors\doctor_detail.html:22
+#: .\models.py:31
+msgid "Very Bad"
+msgstr "خیلی بد"
+
+#: .\models.py:32
+msgid "Bad"
+msgstr "بد"
+
+#: .\models.py:33
+msgid "Normal"
+msgstr "معمولی"
+
+#: .\models.py:34
+msgid "Good"
+msgstr "خوب"
+
+#: .\models.py:35
+msgid "Perfect"
+msgstr "عالی"
+
+#: .\models.py:39
+msgid "Write your comment text"
+msgstr "دیدگاه شما"
+
+#: .\models.py:40
+msgid "Your score with this Doctor"
+msgstr "امتیاز شما به این دکتر"
+
+#: .\templates\doctors\doctor_detail.html:23
 msgid "Expertise"
 msgstr "تخصص"
 
-#: .\templates\doctors\doctor_detail.html:24
+#: .\templates\doctors\doctor_detail.html:25
 msgid "Visiting days"
 msgstr "روزهای ویزیت"
 
-#: .\templates\doctors\doctor_detail.html:25
+#: .\templates\doctors\doctor_detail.html:28
 msgid "Phone number"
 msgstr "تلفن تماس"
 
-#: .\templates\doctors\doctor_detail.html:28
+#: .\templates\doctors\doctor_detail.html:31
 msgid "Address"
 msgstr "آدرس"
 
-#: .\templates\doctors\doctor_detail.html:34
+#: .\templates\doctors\doctor_detail.html:37
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\doctors\doctor_detail.html:36
+#: .\templates\doctors\doctor_detail.html:39
 msgid "Comment for"
 msgstr "نظر برای"
 
-#: .\templates\doctors\doctor_detail.html:72
+#: .\templates\doctors\doctor_detail.html:55
+msgid "Rated"
+msgstr "امتیاز"
+
+#: .\templates\doctors\doctor_detail.html:56
+msgid "out of"
+msgstr "از"
+
+#: .\templates\doctors\doctor_detail.html:77
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\doctors\doctor_detail.html:76
+#: .\templates\doctors\doctor_detail.html:81
 msgid "Submit"
 msgstr "ارسال"
