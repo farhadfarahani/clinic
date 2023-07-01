@@ -21,4 +21,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('accounts/', include('allauth.urls')),
     path('doctors/', include('doctors.urls')),
+
+    # rosetta (i18n)
+    path('rosetta/', include('rosetta.urls'))
 ]
