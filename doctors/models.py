@@ -14,6 +14,7 @@ class Doctor(models.Model):
     address = models.TextField()
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="شماره تلفن باید در فرمت صحیح باشد.")
     phone_number = models.CharField(max_length=20)
+    image = models.ImageField()
 
     def __str__(self):
         return self.name
