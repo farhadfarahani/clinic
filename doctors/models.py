@@ -36,10 +36,10 @@ class Comment(models.Model):
         ('5', _('Perfect')),
     ]
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='comments',)
-    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments', verbose_name='Comment author')
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments', verbose_name=_('Comment author'))
     body = models.TextField(verbose_name=_('Write your comment text'))
     stars = models.CharField(max_length=10, choices=DOCTOR_STARS, verbose_name=_('Your score with this Doctor'))
-    datetime_created = models.DateTimeField(default=timezone.now)
+    datetime_created = models.DateTimeField(_('Date time of creation'), default=timezone.now)
     datetime_modified = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
 

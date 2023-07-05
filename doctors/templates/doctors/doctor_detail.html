@@ -5,6 +5,7 @@
 {% load comment_tags %}
 {% load i18n %}
 {% load jalali_tags %}
+{% load persian_translation_tags %}
 
 {% block content %}
     <div class="container mt-5" dir="rtl">
@@ -26,7 +27,7 @@
                                     class="text-muted">{% trans 'Visiting days' %}: </span>{{ doctor.visiting_days }}
                             </h1>
                             <h1 class="small my-1"><span
-                                    class="text-muted">{% trans 'Phone number' %}: </span>{{ doctor.phone_number }}
+                                    class="text-muted">{% trans 'Phone number' %}: </span>{{ doctor.phone_number|translate_number }}
                             </h1>
                             <h1 class="small my-1"><span
                                     class="text-muted">{% trans 'Address' %}: </span>{{ doctor.address }}</h1>
@@ -36,7 +37,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="card shadow my-3 p-5 w-sm-75 w-100">
                         <h2 class="mb-5">{% trans 'Comments' %}:</h2>
-                        <h3 class="review__title">{{ doctor.comments.all|only_active_comments|length }}
+                        <h3 class="review__title">{{ doctor.comments.all|only_active_comments|length|translate_number }}
                             {% trans 'Comment for' %} {{ doctor.name }}</h3>
                         <div class="border-bottom mb-3">
                             <ul class="review__list">
@@ -47,14 +48,14 @@
                                                 <div class="d-flex flex-sm-row flex-row">
                                                     <div>
                                                         <div class="review__meta" dir="ltr">
-                                                            <span class="review__published-date">{{ comment.datetime_created|to_jalali:'%Y/%m/%d' }}</span>
+                                                            <span class="review__published-date">{{ comment.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}</span>
                                                             <span class="review__dash">-</span>
                                                             <strong class="review__author px-4">{{ comment.author.username }}</strong>
                                                         </div>
                                                         <div class="doctor-rating d-flex mb--20">
                                                             <div class="star-rating star-three">
                                                                 <span>{% trans 'Rated' %} <strong
-                                                                        class="rating">{{ comment.stars }} </strong> {% trans 'out of' %} 5</span>
+                                                                        class="rating">{{ comment.stars|translate_number }} </strong> {% trans 'out of' %} {{ 5|translate_number }}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -62,7 +63,7 @@
                                             </div>
                                         </div>
                                         <p class="review__description text-right px-4 mr-5 pr-5">
-                                            {{ comment.body }}
+                                            {{ comment.body|translate_number }}
                                         </p>
                                     </li>
                                 {% endfor %}

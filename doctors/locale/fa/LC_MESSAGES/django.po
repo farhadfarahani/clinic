@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 22:22+0330\n"
+"POT-Creation-Date: 2023-07-05 19:40+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,70 +17,80 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\models.py:31
+#: .\models.py:32
 msgid "Very Bad"
 msgstr "خیلی بد"
 
-#: .\models.py:32
+#: .\models.py:33
 msgid "Bad"
 msgstr "بد"
 
-#: .\models.py:33
+#: .\models.py:34
 msgid "Normal"
 msgstr "معمولی"
 
-#: .\models.py:34
+#: .\models.py:35
 msgid "Good"
 msgstr "خوب"
 
-#: .\models.py:35
+#: .\models.py:36
 msgid "Perfect"
 msgstr "عالی"
 
 #: .\models.py:39
+#, fuzzy
+#| msgid "Comment for"
+msgid "Comment author"
+msgstr "نظر برای"
+
+#: .\models.py:40
 msgid "Write your comment text"
 msgstr "دیدگاه شما"
 
-#: .\models.py:40
+#: .\models.py:41
 msgid "Your score with this Doctor"
 msgstr "امتیاز شما به این دکتر"
 
-#: .\templates\doctors\doctor_detail.html:23
+#: .\models.py:42
+msgid "Date time of creation"
+msgstr "تاریخ ایجاد"
+
+#: .\templates\doctors\doctor_detail.html:24
 msgid "Expertise"
 msgstr "تخصص"
 
-#: .\templates\doctors\doctor_detail.html:25
+#: .\templates\doctors\doctor_detail.html:26
 msgid "Visiting days"
 msgstr "روزهای ویزیت"
 
-#: .\templates\doctors\doctor_detail.html:28
+#: .\templates\doctors\doctor_detail.html:29
 msgid "Phone number"
 msgstr "تلفن تماس"
 
-#: .\templates\doctors\doctor_detail.html:31
+#: .\templates\doctors\doctor_detail.html:32
 msgid "Address"
 msgstr "آدرس"
 
-#: .\templates\doctors\doctor_detail.html:37
+#: .\templates\doctors\doctor_detail.html:38
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\doctors\doctor_detail.html:39
+#: .\templates\doctors\doctor_detail.html:40
 msgid "Comment for"
 msgstr "نظر برای"
 
-#: .\templates\doctors\doctor_detail.html:55
+#: .\templates\doctors\doctor_detail.html:56
 msgid "Rated"
 msgstr "امتیاز"
 
-#: .\templates\doctors\doctor_detail.html:56
+#: .\templates\doctors\doctor_detail.html:57
 msgid "out of"
 msgstr "از"
 
-#: .\templates\doctors\doctor_detail.html:77
+#: .\templates\doctors\doctor_detail.html:78
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\doctors\doctor_detail.html:81
+#: .\templates\doctors\doctor_detail.html:82
 msgid "Submit"
 msgstr "ارسال"
