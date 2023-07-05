@@ -1,4 +1,5 @@
 from django.contrib import admin
+from jalali_date.admin import ModelAdminJalaliMixin
 
 from .models import Doctor, Comment
 
@@ -9,11 +10,11 @@ class CommentsInline(admin.TabularInline):
 
 
 @admin.register(Doctor)
-class DoctorAdmin(admin.ModelAdmin):
+class DoctorAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     list_display = ['name', 'active', 'expertise', ]
     inlines = [CommentsInline, ]
 
 
 @admin.register(Comment)
-class CommentAdmin(admin.ModelAdmin):
+class CommentAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     list_display = ['doctor', 'author', 'body', 'stars', 'active', ]
